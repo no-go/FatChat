@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FatChat</string>
+    <string name="date_format">dd.MM.yyyy HH:mm</string>
+</resources>
