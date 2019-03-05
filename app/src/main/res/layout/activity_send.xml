@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
+    android:id="@+id/rootView"
     tools:context=".MainActivity">
-
 
     <EditText
         android:id="@+id/editAddr"
@@ -14,17 +14,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:ems="10"
         android:hint="tel"
+        android:background="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorAccent2"
+        android:theme="@style/MyEditTextTheme"
         android:inputType="phone"
-        android:textColor="?attr/colorAccent" />
+        android:textColor="@color/colorAccent" />
 
-    <EditText
+    <com.github.data5tream.emojilib.EmojiEditText
         android:id="@+id/editMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:theme="@style/MyEditTextTheme"
         android:layout_below="@+id/editAddr"
+        android:layout_margin="5dp"
         android:ems="10"
         android:lines="8"
         android:gravity="top|start"
@@ -33,6 +42,9 @@
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
         android:textAlignment="gravity"
+        android:background="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorAccent2"
+        android:textColorHighlight="@android:color/transparent"
         android:textColor="@color/colorAccent"
         android:typeface="monospace" />
 
@@ -59,4 +71,15 @@
         android:background="@color/colorAccent"
         android:textColor="@color/colorPrimaryDark"
         android:text="cancel" />
+
+    <ImageButton
+        android:id="@+id/emojiBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editMsg"
+        android:background="@android:color/transparent"
+        android:padding="15dp"
+        android:src="@drawable/emoji_1f600" />
+
 </RelativeLayout>
